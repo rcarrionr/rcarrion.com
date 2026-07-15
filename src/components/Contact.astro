@@ -1,0 +1,31 @@
+---
+const links = [
+	{ label: 'Email', href: 'mailto:richard.carrion.r@gmail.com' },
+	{ label: 'GitHub', href: 'https://github.com/rcarrionr' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/richard-carrion-208a4b155/' },
+];
+---
+
+<section id="contact" class="mx-auto max-w-4xl px-6 py-20">
+	<h2 class="text-2xl font-semibold tracking-tight text-slate-100">Get in touch</h2>
+	<p class="mt-2 max-w-xl text-sm text-slate-500">
+		Feel free to reach out — I'm happy to talk about Azure architecture, cloud
+		projects, or new opportunities.
+	</p>
+	<div class="mt-8 flex flex-wrap gap-4">
+		{links.map((link) => (
+			<a
+				href={link.href}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:border-sky-400/40 hover:text-sky-300"
+			>
+				{link.label}
+			</a>
+		))}
+	</div>
+</section>
+
+<footer class="mx-auto max-w-4xl px-6 py-10 text-xs text-slate-600">
+	© {new Date().getFullYear()} Richard Carrion.
+</footer>

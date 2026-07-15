@@ -1,0 +1,40 @@
+---
+// Placeholder entries — replace with real roles, companies, and dates.
+const roles = [
+	{
+		title: 'Azure Solutions Architect',
+		company: 'Company Name',
+		period: '20XX — Present',
+		bullets: [
+			'Designed and implemented cloud infrastructure on Microsoft Azure.',
+			'Led architecture decisions for scalable, production-grade systems.',
+		],
+	},
+	{
+		title: 'Full Stack Developer',
+		company: 'Previous Company',
+		period: '20XX — 20XX',
+		bullets: [
+			'Built and maintained applications using TypeScript and Node.js.',
+		],
+	},
+];
+---
+
+<section id="experience" class="mx-auto max-w-4xl px-6 py-20">
+	<h2 class="text-2xl font-semibold tracking-tight text-slate-100">Experience</h2>
+	<p class="mt-2 text-sm text-slate-500">Placeholder entries — update with your real history.</p>
+	<div class="mt-8 space-y-8">
+		{roles.map((role) => (
+			<div class="border-l border-white/10 pl-6">
+				<div class="flex flex-wrap items-baseline justify-between gap-x-4">
+					<h3 class="font-medium text-slate-100">{role.title} · {role.company}</h3>
+					<span class="text-xs text-slate-500">{role.period}</span>
+				</div>
+				<ul class="mt-2 list-inside list-disc space-y-1 text-sm text-slate-400">
+					{role.bullets.map((bullet) => <li>{bullet}</li>)}
+				</ul>
+			</div>
+		))}
+	</div>
+</section>

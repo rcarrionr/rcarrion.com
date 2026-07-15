@@ -1,0 +1,40 @@
+---
+const projects = [
+	{
+		name: 'ruleta',
+		language: 'TypeScript',
+		url: 'https://github.com/rcarrionr/ruleta',
+	},
+	{
+		name: 'Typed-gemisis',
+		language: 'JavaScript',
+		url: 'https://github.com/rcarrionr/Typed-gemisis',
+	},
+	{
+		name: 'richard-carrion-nestjs',
+		language: 'TypeScript / NestJS',
+		url: 'https://github.com/rcarrionr/richard-carrion-nestjs',
+	},
+];
+---
+
+<section id="projects" class="mx-auto max-w-4xl px-6 py-20">
+	<h2 class="text-2xl font-semibold tracking-tight text-slate-100">Projects</h2>
+	<p class="mt-2 text-sm text-slate-500">
+		A few things I've been building. See more on
+		<a href="https://github.com/rcarrionr" class="text-sky-400 hover:underline">GitHub</a>.
+	</p>
+	<div class="mt-8 grid gap-4 sm:grid-cols-3">
+		{projects.map((project) => (
+			<a
+				href={project.url}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="group rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-sky-400/40 hover:bg-white/[0.06]"
+			>
+				<h3 class="font-medium text-slate-100 group-hover:text-sky-300">{project.name}</h3>
+				<p class="mt-2 text-xs text-slate-500">{project.language}</p>
+			</a>
+		))}
+	</div>
+</section>
